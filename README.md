@@ -1,59 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛒 Laravel E-Commerce Store
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 📋 Overview
+A modern, Demo e-commerce website built with **Laravel 12**, featuring product browsing, shopping cart management, and seamless checkout integration with **HitPay[DEMO]** payment processing.
 
-## About Laravel
+## ✨ Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 🏪 Product Management
+- **Product Catalog** – Browse products with images, descriptions, and pricing
+- **Categories & Filtering** – Organize products by category (Christening, Wedding, Birthday)
+- **Product Details** – View comprehensive product information with images
+- **Featured Products** – Highlight special products on the homepage
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🛍️ Shopping Cart
+- **Add / Remove Items** – Easy cart management with real-time updates
+- **Quantity Adjustment** – Increase or decrease item quantities in cart
+- **Cart Summary** – View total costs, taxes, and shipping estimates
+- **Persistent Cart** – Shopping cart saved across sessions
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 💳 Checkout & Payments
+- **Secure Checkout Process** – Multi-step checkout flow
+- **HitPay Integration** – Secure payment processing with multiple payment methods
+- **Order Summary** – Review order details before payment
+- **Order Confirmation** – Instant confirmation with order tracking
 
-## Learning Laravel
+### 👤 User Experience
+- **Responsive Design** – Mobile-friendly interface
+- **Fast Loading** – Optimized performance
+- **Intuitive Navigation** – Easy-to-use interface
+- **Secure Transactions** – HTTPS enforced, secure form handling
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 🛠️ Tech Stack
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Backend
+- **Laravel 12** – PHP framework
+- **MySQL / TiDB** – Database management
+- **Eloquent ORM** – Database interactions
+- **Blade Templating** – Server-side rendering
 
-## Laravel Sponsors
+### Frontend
+- **Tailwind CSS** – Responsive 
+- **Vite** – Modern build tool
+- **JavaScript Vanilla** – Interactive features
+- **Font Awesome** – Icon library
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Deployment & Services
+- **Railway.app** – Cloud hosting platform
+- **TiDB Cloud** – MySQL-compatible cloud database
+- **HitPay[DEMO ONLY]** – Payment gateway integration
+- **GitHub** – Version control
 
-### Premium Partners
+## 🚀 Getting Started
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Prerequisites
+- PHP 8.2+
+- MySQL / TiDB database
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 📁 Project Structure
+`laravel-e-commerce/
+├── app/
+│   ├── Http/Controllers/     # Application controllers
+│   │   ├── CartController.php
+│   │   └── CheckoutController.php
+│   ├── Models/              # Eloquent models
+│   └── Services/            # Business logic
+├── database/
+│   ├── migrations/          # Database migrations
+│   └── seeders/            # Test data seeders
+├── resources/
+│   ├── views/              # Blade templates
+│   └── css/js/             # Frontend assets
+├── routes/                  # Application routes
+└── public/                  # Public assets
+`
