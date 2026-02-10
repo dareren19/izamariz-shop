@@ -56,7 +56,8 @@ A modern, Demo e-commerce website built with **Laravel 12**, featuring product b
 - MySQL / TiDB database
 
 ## 📁 Project Structure
-`laravel-e-commerce/
+```
+laravel-e-commerce/
 ├── app/
 │   ├── Http/Controllers/     # Application controllers
 │   │   ├── CartController.php
@@ -71,4 +72,4 @@ A modern, Demo e-commerce website built with **Laravel 12**, featuring product b
 │   └── css/js/             # Frontend assets
 ├── routes/                  # Application routes
 └── public/                  # Public assets
-`
+```
