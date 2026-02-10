@@ -64,7 +64,7 @@ class ProductSeeder extends Seeder
                 'description' => '5x7 Sliding design invitation cart cover.',
                 'price' => 20.00,
                 'image' => 'https://down-ph.img.susercontent.com/file/ph-11134207-7rase-m6rf2khzwumjb3.webp',
-                'category' => 'Chirstening',
+                'category' => 'Christening',
                 'brand' => 'Sliding',
                 'stock' => 25,
                 'is_featured' => false,
@@ -172,7 +172,7 @@ class ProductSeeder extends Seeder
         ];
 
         foreach($products as $product){
-            Product::create([
+            Product::firstOrCreate([
                 ...$product,
                 'slug' => Str::slug($product['name']),
             ]);

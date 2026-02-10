@@ -36,7 +36,7 @@ class CheckoutController extends Controller
         $cartItems = $this->getCartWithProducts($cart);
         $subtotal = $this->calculateSubTotal($cartItems);
 
-        return view('Checkout', [
+        return view('/checkout', [
             "cartItems" => $cartItems,
             "subtotal" => $subtotal,
         ]);

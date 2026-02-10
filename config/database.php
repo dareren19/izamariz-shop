@@ -44,22 +44,23 @@ return [
         ],
 
         'mysql' => [
-            'driver' => 'mysql',
-            'host' => env('DB_HOST'),
-            'port' => env('DB_PORT', 4000),
-            'database' => env('DB_DATABASE'),
-            'username' => env('DB_USERNAME'),
-            'password' => env('DB_PASSWORD'),
-            
-            'charset' => env( 'utf8mb4'),
-            'collation' => env( 'utf8mb4_unicode_ci'),
-            'prefix' => '',
-            'prefix_indexes' => true,
-            // 'strict' => true,
-            // 'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? [
-        PDO::MYSQL_ATTR_SSL_CA => base_path('storage/certs/isrgrootx1.pem'),
-    ] : [],
+             'driver' => 'mysql',
+    'host' => env('DB_HOST', '127.0.0.1'),
+    'port' => env('DB_PORT', '3306'),
+    'database' => env('DB_DATABASE', 'laravel_e_com'),
+    'username' => env('DB_USERNAME', 'root'),
+    'password' => env('DB_PASSWORD', ''),
+    
+    // FIXED: Direct values, not env()
+    'charset' => 'utf8mb4',
+    'collation' => 'utf8mb4_unicode_ci',
+    'prefix' => '',
+    'prefix_indexes' => true,
+    'strict' => true,
+    'engine' => null,
+    
+    // FIXED: Empty options for local
+    'options' => extension_loaded('pdo_mysql') ? [] : [],
         ],
 
         'mariadb' => [

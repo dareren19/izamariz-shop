@@ -133,7 +133,7 @@
                         
                         {{-- Checkout Button --}}
                         <div>
-                            <a href="{{url('/checkout')}}"
+                            <a href="{{route('checkout.index')}}"
                                class="flex items-center justify-center w-full gap-2 px-6 py-3 mt-6 font-medium text-white bg-primary-600 rounded-lg transition-colors hover:bg-primary-700">
                                 Proceed to Checkout
                             </a>
