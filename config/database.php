@@ -46,27 +46,26 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST'),
-            'port' => env('DB_PORT', 4000),
-            'database' => env('DB_DATABASE'),
-            'username' => env('DB_USERNAME'),
-            'password' => env('DB_PASSWORD'),
-            
-            'charset' => env( 'utf8mb4'),
-            'collation' => env( 'utf8mb4_unicode_ci'),
+            'port' => env('DB_PORT', '4000'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
-            // 'strict' => true,
-            // 'engine' => null,
+            'strict' => true,
+            'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-    PDO::MYSQL_ATTR_SSL_CA => env('DB_SSL_CA', '/etc/ssl/certs/ca-certificates.crt'),
-    PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => env('DB_SSL_VERIFY', false),
-]) : [],
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
         ],
 
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'laravel'),
             'username' => env('DB_USERNAME', 'root'),
@@ -79,10 +78,8 @@ return [
             'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-    defined('PDO::MYSQL_ATTR_SSL_CA') 
-        ? \PDO::MYSQL_ATTR_SSL_CA 
-        : (\Pdo\Mysql\Driver::ATTR_SSL_CA ?? null) => env('MYSQL_ATTR_SSL_CA'),
-]) : [],
+                PDO::MYSQL_ATTR_SSL_CA => base_path(env('MYSQL_ATTR_SSL_CA', '')),
+            ]) : [],
         ],
 
         'pgsql' => [
@@ -150,7 +147,7 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')).'-database-'),
+            'prefix' => env('REDIS_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')) . '-database-'),
             'persistent' => env('REDIS_PERSISTENT', false),
         ],
 
