@@ -34,5 +34,12 @@ class AppServiceProvider extends ServiceProvider
         // Optional: Also set port for good measure
         $this->app['request']->server->set('SERVER_PORT', 443);
     }
+    if (env('DB_SSL_CA')) {
+    $path = storage_path('app/ca.pem');
+    if (!file_exists($path)) {
+        file_put_contents($path, env('DB_SSL_CA'));
+    }
+    putenv("DB_SSL_CA={$path}");
+}
 }
 }
