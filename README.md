@@ -2,6 +2,15 @@
 
 ## 📋 Overview
 A modern, Demo e-commerce website built with **Laravel 12**, featuring product browsing, shopping cart management, and seamless checkout integration with **HitPay[DEMO]** payment processing.
+## ➡️[LIVE DEMO](https://trustworthy-amber-goat.148-163-121-30.cpanel.site/)
+## Test Cards   
+Use the following card numbers to simulate various payment outcomes:
+|     Number           |     Expiry      |     CVC      |     Description       |
+|----------------------|-----------------|--------------|-----------------------|
+| 4242 4242 4242 4242  | Any future date | Any 3 digits | Successful payment    |
+| 4000 0000 0000 0002  | Any future date | Any 3 digits | Declined transaction  |
+| 5555 5555 5555 4444  | Any future date | Any 3 digits | Successful payment    |
+| 3782 822463 10005    | Any future date | Any 4 digits | Successful payment    |
 
 ## ✨ Features
 
